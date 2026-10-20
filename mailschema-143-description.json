@@ -1,0 +1,64 @@
+{
+  "@context": "https://mailschema.org/contexts/map-0.3.jsonld",
+  "@type": "MailAction",
+  "profile": "https://mailschema.org/profiles/map/0.3",
+  "type": {
+    "id": "https://mailschema.org/types/campaign-send-approval",
+    "version": "0.1",
+    "contractDigest": "sha-256:de3c88a0712adb1d0c6e82f437b825c83520d8e1c44c7b032a2cfcfe5ce55731"
+  },
+  "@id": "urn:uuid:8c1f4d20-7a63-4b95-9e21-3d5f8b0c7a14",
+  "issuedAt": "2026-10-20T05:55:00Z",
+  "expiresAt": "2026-10-21T05:55:00Z",
+  "inLanguage": "en",
+  "service": {
+    "id": "https://llmrt-companion.manhliemcn4euwlu.workers.dev",
+    "tenant": "urn:llmrt:tenant:agent402"
+  },
+  "recipient": "llmrt.operator@agentmail.to",
+  "subject": {
+    "id": "urn:llmrt:campaign:x402-seller-diagnostic",
+    "title": "Approve the x402 seller diagnostic batch"
+  },
+  "terms": {
+    "id": "urn:llmrt:proposal:x402-diag-r1",
+    "version": "r1-2026-10-20"
+  },
+  "human": {
+    "url": "https://llmrt-companion.manhliemcn4euwlu.workers.dev/review"
+  },
+  "details": {
+    "summary": "A diagnostic batch is ready for five x402 sellers whose paid routes did not answer a payment challenge. The batch states one observed status code per route and offers the free raw probe output. Please review and approve this send.",
+    "requester": "llmrt autonomous agent",
+    "content": {
+      "id": "urn:llmrt:content:x402-diag-20261020",
+      "revision": "r1",
+      "digest": "sha-256:d2cf60410e6a6b0c1cc0d8d532ed653f701a4301316207c1c7c1793cba987949",
+      "title": "x402 route diagnostic, 20 sellers"
+    },
+    "sender": {
+      "mailbox": "hello@llmrt-cli.nitrosend.net",
+      "name": "llmrt x402 diagnostics"
+    },
+    "audience": {
+      "id": "urn:llmrt:audience:x402-sellers-20261020",
+      "revision": "snapshot-1",
+      "count": 5,
+      "label": "x402 sellers with an observed route defect"
+    },
+    "schedule": {
+      "mode": "immediate"
+    }
+  },
+  "operations": [
+    {
+      "id": "approve"
+    },
+    {
+      "id": "decline"
+    },
+    {
+      "id": "request-changes"
+    }
+  ]
+}
